@@ -1,0 +1,216 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #5C8374;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar > div {
+    margin-right: 15px;
+}
+
+input[type="search"] {
+    padding-right: 30px; /* Add some space for the magnifier icon */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    height: 30px;
+    width: 300px;
+    box-sizing: border-box;
+}
+
+i.fa-search {
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    transform: translateY(-120%);
+    color: #555;
+}
+
+.horizontal-div {
+    width: 300px;
+    display: flex;
+    justify-content: flex-start; /* Aligns content to the left */
+    align-items: flex-start; /* Aligns content to the top */
+    border: 1px solid #555;
+    padding: 10px;
+    margin: 2px 0 20px 10px; /* Removed "auto" and adjusted margin */
+    position: absolute;
+    left: 0; /* Position the div at the left edge of the screen */
+    top: 20; /* Align the div to the top of the screen */
+    height: 74.5%;
+    background-color: #555;
+    color: white;
+    font-size: 20px;
+    letter-spacing: 1px;
+    overflow: hidden; /* Set overflow to hidden to prevent content overflow */
+
+}
+
+.features-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.list{
+    padding:2rem 1rem;
+}
+
+.features-list a {
+    text-decoration: none;
+    color: #c7c2c2;
+}
+
+.features-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    font-size: 18px;
+}
+
+.features-list li i {
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+.features-list li:hover {
+    color: #007bff;
+}
+
+.centered-div {
+    margin-left: 250px; /* Adjust margin to create space for horizontal-div */
+    background-color: #555;
+    width: 65%; /* Specify a percentage of the viewport width for the centered div */
+    position: fixed;
+    top: 45.2%; /* Vertically center the div */
+    left: 45%; /* Horizontally center the div */
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    overflow-x: auto;
+    overflow-y: auto;
+    white-space: nowrap;
+    z-index: 1; /* Ensure the centered div is above other content */
+    height: 67.8%;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+.message {
+position: fixed;
+top: 10%;
+left: 50%;
+transform: translateX(-50%);
+padding: 10px;
+background-color: #2b1e1d; /* Red for error messages */
+color: white;
+border-radius: 5px;
+animation: messageAnimation 3s ease-out;
+}
+
+
+/* Keyframes for message animation */
+@keyframes messageAnimation {
+0% {
+    top: -50px;
+    opacity: 0;
+}
+30% {
+    top: 2%;
+    opacity: 1;
+}
+}
+
+.edit-icon, .delete-icon, .addi-icon {
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.page-loader {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+display: flex;
+justify-content: center;
+align-items: center;
+z-index: 1000; /* Higher z-index to make sure it's on top of other content */
+
+}
+
+.loader-image {
+width: 100px; /* Adjust the size as needed */
+height: auto;
+border-radius: 50%;
+}
+
+th{
+    border: 1px solid #ccc;
+    padding: 1px 5px;
+}
+
+.view {
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.view:hover {
+    background-color: #d3d3d3;
+}
+
+/* Style for the button */
+#deleteButton {
+background-color: #FF5733;
+color: white;
+border: none;
+padding: 10px 20px;
+border-radius: 5px;
+cursor: pointer;
+font-size: 16px;
+transition: background-color 0.3s ease;
+display: none;
+}
+
+/* Hover effect */
+#deleteButton:hover {
+background-color: #E64A19;
+}
+
+/* Click animation */
+#deleteButton.clicked {
+animation: clickAnimation 0.3s ease-in-out;
+}
+
+@keyframes clickAnimation {
+0%, 100% {
+    transform: scale(1);
+}
+50% {
+    transform: scale(0.9);
+}
+}
+
+.disabled-feature {
+    color: gray;
+    pointer-events: none; /* This disables click events on the list item */
+}
+
+
+
